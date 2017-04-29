@@ -4,6 +4,10 @@
   "main": "index.js",
   "repository": {},
   "license": "MIT",
+  "scripts": {
+    "test": "mocha --compiler babel-register --require tests/browser.js tests/*.spec.js",
+    "cov": "node_modules/.bin/nyc --reporter=lcov --require babel-core/register npm test -- -R spec"
+  },
   "devDependencies": {
     "babel-loader": "^6.4.1",
     "babel-register": "^6.24.1",
